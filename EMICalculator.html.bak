@@ -8,21 +8,21 @@
         <script lang="Javascript">
             function findemi()
             {
-				document.getElementById("emival").value=5;
-                var amount,interest,no_of_months,interestrate,emi;
-                amount=document.getElementById("amount").value;
-                interestrate=document.getElementById("interestrate").value;
-                no_of_months=document.getElementById("months").value;
-                interest=(a*(irate*0.01))/nom;
+				
+                var a,i,nom,emi;
+                a=document.getElementById("amount").value;
+                i=document.getElementById("interestrate").value;
+                nom=document.getElementById("months").value;
+                interest=(a*(i*0.01))/nom;
                 emi=((a/nom)+i);
-                
+                document.getElementById("emival").value=emi;
             }
         </script>
         <h1>EMI Calculator</h1>
 Amount        <input type="number" name="amount" id="amount"><br><br>
 rate &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp         <input type="number" name="interestrate" id="interestrate"><br><br>
 Months          <input type="number" name="months" id="months"><br><br>
-<input type="button" name="emi" id="emi" value="EMI" onlcick="findemi()"><br><br> 
+<input type="button" name="emi" id="emi" value="EMI" onclick="findemi()"><br><br> 
   EMI Amount <br><input type="number" name="emival" id="emival">
     </body>
 </html>
